@@ -1,0 +1,15 @@
+We’d like you to build a simple REST API for us - a basic movie database interacting with an external API. Here’s the full specification of endpoints that we’d like it to have:
+
+POST /movies:
+The request body should contain only the movie title, and its presence should be validated.
+Based on the passed title, other movie details should be fetched from http://www.omdbapi.com/ (or other similar, public movie database) - and saved to the application database.
+Request response should include a complete movie object and all data fetched from external API.
+GET /movies:
+Should fetch a list of all movies already present in the application database.
+Additional filtering and sorting are optional, but some implementation is a bonus.
+POST /comments:
+The request body should contain the ID of the movie already present in the database and the comment text body.
+Comment should be saved to the application database and returned in the request-response.
+GET /comments:
+Should fetch a list of all comments present in the application database.
+Should allow filtering comments by associated movie, bypassing its ID.
